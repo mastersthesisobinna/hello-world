@@ -63,8 +63,4 @@ export class InputFormatDirective {
     let DomValue: string = this.el.nativeElement.value;
     this.el.nativeElement.value = DomValue;
   }
-
-  //You can implement this if you wish
-  onFocus = () => {}
-
 }
