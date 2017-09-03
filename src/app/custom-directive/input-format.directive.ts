@@ -21,7 +21,7 @@ export class InputFormatDirective {
 
     switch(this.format){
       case 'USA': this.phoneFormatUSA();
-                  break;
+                  break;                  
       case 'NGN': this.phoneFormatNigeria();
                   break;
       default: this.noPhoneFormat();
