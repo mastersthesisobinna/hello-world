@@ -1,0 +1,37 @@
+<div>
+<h1>Welcome Angular  </h1>
+<p>
+    This data: {{title}}, is created in the <span id="sp1">AppComponent</span> class
+</p>
+</div>
+
+<courses></courses>
+
+<app-course></app-course>
+
+<favorite 
+    [aliasIsFavorite]="favoritePresetValue" 
+    (change)="returnEventData($event)">
+</favorite>
+
+
+<app-demo></app-demo>
+
+<reuseComponent [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></reuseComponent>
+
+<shadow></shadow>
+
+<button class="btn btn-primary">Exposed style No shadow</button>
+
+<angularContainer>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">Body</div>
+</angularContainer>
+
+<directiveIF></directiveIF>
+
+<directiveSwitch></directiveSwitch>
+
+<directiveFor></directiveFor>
+
+<app-custom-directive></app-custom-directive>

@@ -1,0 +1,14 @@
+<h1>
+  05 Building Re-usable Components
+</h1>
+
+<div>
+  <br>
+  Click Star icon: 
+  <span 
+  class="glyphicon" 
+  [class.glyphicon-star]="isFavorite"
+  [class.glyphicon-star-empty]="!isFavorite"
+  (click)="changeStarIcon($event)">
+  </span>  
+</div>

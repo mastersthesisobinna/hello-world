@@ -1,0 +1,13 @@
+<h1>Summary</h1>
+<div [textContent]="Age | numberFormat"></div>
+<div [textContent]="Name | uppercase"></div>
+<div>{{Worth | currency:'NGN':true:'.2-2'}}</div>
+<div *ngIf="summarize">
+  {{Text | summary}}
+</div>
+<div *ngIf="!summarize">
+  {{Text}}
+</div>
+
+
+<button class="btn btn-primary" (click)="unSummarizeText()">More</button>
