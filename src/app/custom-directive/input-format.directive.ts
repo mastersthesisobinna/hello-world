@@ -26,7 +26,7 @@ export class InputFormatDirective {
                   break;
       default: this.noPhoneFormat();
                   break;
-    }
+    } 
   }
 
   phoneFormatUSA = () => {
