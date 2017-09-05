@@ -4,21 +4,19 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   selector: '[appInputFormat]'
 })
 export class InputFormatDirective {
-  private el: ElementRef;
+  private el: ElementRef; //access DOM element value this.el.nativeElement.value
   @Input('format') format: string;  
 
   constructor(el:ElementRef) { 
     this.el = el;
   }
 
-  //Consider this @HostListener has output same as @Output but used differently
-  @HostListener('blur') onBlur = () => {
-    /*
-      With the @HostListener('blur'), when the user types in textbox and moves
-      focus outside, the number entered will be formatted. In this example we 
-      are using a custom directive to format a USA phone number.
-    */
-
+  /*
+    The @HostListener handles event triggered from UI by calling native event.
+    For example the native event method blur, is triggered when a user lose focus from
+    an HTML input text box. The handler for this event is the method onBlur
+  */
+  @HostListener('blur') onBlur = () => {    
     switch(this.format){
       case 'USA': this.phoneFormatUSA();
                   break;                  
