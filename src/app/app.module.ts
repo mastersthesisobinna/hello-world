@@ -44,7 +44,7 @@ import { CustomDirectiveComponent } from './custom-directive/custom-directive.co
   ],
   imports: [
     BrowserModule, //add all the @angular libraries require.
-    FormsModule    //required for two-way binding to work
+    FormsModule    //required for two-way binding to work ngModel
   ],
   providers: [MyCoursesService], //registering any dependencies required to run the app
   bootstrap: [AppComponent] //can add other component to be loaded on startup. This mean that the component's selector can also be used in the index.html directly
